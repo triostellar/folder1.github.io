@@ -1,10 +1,18 @@
-.header-h4{
-    /* opacity: 1; */
-    t
+.section-style{
+    border-radius: 9px;
+    box-shadow: 3px 3px 8px 4px rgb(233 60 10), -3px -3px 8px 4px rgb(251 110 68);
+    height: 140px;
+    overflow: hidden;
 }
 
-.header-h4-an {
-    opacity: 0;
+.active{
+height: auto;
 }
 
+.section-style div .d {
+    display: none;
+}
 
+.dis {
+    display: block !important;
+}
