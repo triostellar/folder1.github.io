@@ -23,7 +23,7 @@
 
 /* Animation */
 .h1-slid-up {
-    margin-top: 1rem;
+    margin: 3rem 0;
     opacity: 1;
 }
 
@@ -128,5 +128,5 @@ footer ul{
 }
 
 footer ul li{
-    color:  rgb(206, 191, 151);
+    color:  rgb(27 14 1);
 }
