@@ -146,7 +146,8 @@ footer ul li a:hover{
 
 .navbar-nav .nav-item1 .nav-link1{
     color: #967329;
-    padding: 0.5rem;
+    font-weight: 500;
+    /* padding: 0.5rem; */
 }
 
 .navbar-nav .nav-item1 .nav-link1:hover{
