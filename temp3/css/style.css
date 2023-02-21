@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fugaz+One&display=swap');
+
+.banner-title{
+    font-size: 6rem;
+    text-shadow: 2px 2px 2px #181818, -2px -2px 2px #c0c0c0;
+    font-family: 'Concert One', cursive;
+}
+
+.banner-sub-title{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    /* margin-top: 70px; */
+    color: transparent;
+    letter-spacing: 5px;
+    font-family: 'Fugaz One', cursive;
+    margin-top: -130px;
+    font-size: 2.5rem;
+    font-weight:500;
+}
+
+.banner-sub-title::before{
+    content: attr(data-text);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    color: #98bf21;
+    overflow: hidden;
+    border-right: 4px solid  #98bf21;
+    animation: type 8s steps(16) infinite;
+    font-size: 2.5rem;
+    font-family: 'Fugaz One', cursive;
+}
+
+@keyframes type{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+.banner1{
+    position: absolute;
+    height: 600px;
+    background-image: url(../images/banner7.jpg);
+    width: 100%;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.banner2{
+    height: 600px;
+    background-image: url(../images/banner9.jpg);
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bnr-relative-bg1{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a9f;
+}
+
+.bnr-relative-bg2{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #2c2c2ca4;
+}
+
+.text-container1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e7e7e7; 
+    text-align: center; 
+    box-shadow: 0.2rem 0.2rem 0.2rem #1f1f1f, -0.1rem -0.1rem 0.2rem #818181;
+    border-radius: 0.2rem;
+}
+
+.text-container2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #98bf21;
+     text-align: center;
+     box-shadow: 0.2rem 0.2rem 0.2rem #1f1f1f, -0.1rem -0.1rem 0.2rem #818181;
+     border-radius: 0.2rem;
+}
+
+.bnr-txt{
+    font-size: 1.3rem;
+    font-weight:500;
+}
+
+.services{
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .bnr-width {
+        width: calc(100% - 20px);
+        height: auto;
+    }
+
+    .bnr-width h1{
+        font-size: 3rem;
+    }
+
+    .bnr-width .banner-sub-title{
+        margin-top: -150px;
+        font-size: 1.5rem;
+    }
+
+    .bnr-width .banner-sub-title::before{
+        font-size: 1.5rem;
+    }
+
+    .bnr-width .bnr-txt{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .bnr-width {
+        width: 70%;
+        height: auto;
+    }
+
+    .bnr-width h1{
+        font-size: 4rem;
+    }
+
+    .bnr-width .banner-sub-title{
+        margin-top: -120px;
+        font-size: 2rem;
+    }
+
+    .bnr-width .banner-sub-title::before{
+        font-size: 2rem;
+    }
+
+    .bnr-width .bnr-txt{
+        font-size: 1.2rem;
+    }
+} 
+
+@media only screen and (min-width: 1024px) {
+    .bnr-width {
+        width: 60%;
+        height: auto;
+    }
+
+    .bnr-width h1{
+        font-size: 5rem;
+    }
+
+    .bnr-width .banner-sub-title{
+        margin-top: -140px;
+        font-size: 2.5rem;
+    }
+
+    .bnr-width .banner-sub-title::before{
+        font-size: 2.5rem;
+    }
+
+    .bnr-width .bnr-txt{
+        font-size: 1.4rem;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    .bnr-width {
+        width: auto;
+        height: auto;
+    }
+} 
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* Above code isfor banner dont delte its working fine. with banner */
+
+
+
+/* ------------------- */
+
+body{
+    background-color: #1b1b1b !important;
+    color: #c90038 !important;
+}
+
+.btn-sh{
+    box-shadow: -2px -2px 3px 0 #1b1b1b inset, 2px 2px 3px 0 #1b1b1b inset, 2px 2px 6px 0 #000000, -2px -2px 4px 0 #606060;
+    border: 1px solid #3b3b3b;
+    border-radius: 25px;
+    padding: 0.3rem 1.2rem;
+    color: #c90038 !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.img-sh{
+    box-shadow: -2px -2px 3px 0 #1b1b1b inset, 2px 2px 3px 0 #1b1b1b inset, 2px 2px 6px 0 #000000, -3px -3px 6px 0 #606060;
+    border: 1px solid #3b3b3b;
+    border-radius: 12px;
+    padding: 0.3rem;
+}
+
+.social-style{
+    padding: 0.2rem 0.4rem;
+    box-shadow: 2px 2px 2px 0 #111111 inset, -2px -2px 4px 0 #242424 inset;
+    border-radius: 9px;
+}
+
+.card-style{
+    /* box-shadow: -2px -2px 3px 0 #1b1b1b inset, 2px 2px 3px 0 #1b1b1b inset, 3px 3px 6px 0 #000000, -3px -3px 6px 0 #606060; */
+    /* border: 1px solid #3b3b3b; */
+    /* border-radius: 15px; */
+    text-align: justify;
+    padding: 1rem 1.2rem;
+}
+
+.card-style p{
+    /* box-shadow: -2px -2px 3px 0 #1b1b1b inset, 2px 2px 3px 0 #1b1b1b inset, 3px 3px 6px 0 #000000, -3px -3px 6px 0 #606060; */
+    /* border: 1px solid #3b3b3b; */
+    /* border-radius: 15px; */
+    text-align: justify;
+}
+
+.team-card{
+    border: 1px solid #595959;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: -2px -2px 3px 0 #0f0f0f inset, 2px 2px 3px 0 #3a3a3a inset, 3px 3px 6px 0 #000000, -3px -3px 6px 0 #404040;
+    border-radius: 15px;
+}
+
+.team-card-img{
+    height: 110px;
+    width: 110px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px black inset, -2px -2px 3px #434343 inset;
+    border-radius: 55px;
+}
+
+.team{
+    box-shadow: -2px -2px 3px 0 #1b1b1b inset, 2px 2px 3px 0 #1b1b1b inset, 2px 2px 6px 0 #000000, -2px -2px 4px 0 #606060;
+    border: 1px solid #3b3b3b;
+    border-radius: 15px;
+    padding: 3rem 5rem;
+}
+
+.team img{
+    box-shadow: 2px 2px 3px black inset, -2px -2px 3px #434343 inset;
+    border-radius: 45px;
+}
+
+.nav-item-color{
+    color: #92032b !important;
+}
+
+.nav-item-color:hover{
+    color: #b3123f !important;
+}
+
+.nav-item:hover{
+    box-shadow: 2px 2px 2px 0 #111111 inset, -2px -2px 4px 0 #242424 inset;
+    border-radius: 9px;
+}
+
+.team-social span{
+    box-shadow: 2px 2px 2px 0 #111111 inset, -2px -2px 4px 0 #242424 inset;
+    border-radius: 9px;
+}
+
+.brand-title{
+    font-size: 2rem;
+}
+
+.banner-containt{
+    text-align: center;
+    width: 90%;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+    .banner-containt{
+    text-align: center;
+    width: 50%;
+}
+}
+
+@media (min-width: 992px) {
+    .banner-containt{
+    text-align: center;
+    width: 50%;
+}
+
+    .brand-title{
+    font-size: 3rem;
+}
+}
+
+@media (min-width: 1200px) {
+    .banner-containt{
+    text-align: center;
+    width: 50%;
+}
+
+    .brand-title{
+    font-size: 4rem;
+}
+}
