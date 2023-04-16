@@ -27,23 +27,36 @@
 
   <script>
     // get file list from server
-    fetch('/file-list')
-      .then(response => response.json())
-      .then(files => {
-        // add files to table
-        const fileList = document.getElementById('fileList');
-        files.forEach(file => {
-          const row = document.createElement('tr');
-          const nameCell = document.createElement('td');
-          const sizeCell = document.createElement('td');
-          nameCell.textContent = file.name;
-          sizeCell.textContent = file.size;
-          row.appendChild(nameCell);
-          row.appendChild(sizeCell);
-          fileList.appendChild(row);
-        });
-      })
-      .catch(error => console.error(error));
+    const express = require('express');
+const path = require('path');
+const fs = require('fs');
+const app = express();
+
+const directoryPath = 'E:/'; // replace with the path to your directory
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  const fileList = [];
+  fs.readdir(directoryPath, (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error getting files');
+    }
+    files.forEach((file) => {
+      fileList.push({
+        name: file,
+        size: fs.statSync(path.join(directoryPath, file)).size,
+      });
+    });
+    res.render('index', { files: fileList });
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
   </script>
 
 </body>
