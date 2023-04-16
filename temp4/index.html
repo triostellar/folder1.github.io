@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Computer Files</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Computer Files</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>File Size</th>
+        </tr>
+      </thead>
+      <tbody id="fileList">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    // get file list from server
+    fetch('/file-list')
+      .then(response => response.json())
+      .then(files => {
+        // add files to table
+        const fileList = document.getElementById('fileList');
+        files.forEach(file => {
+          const row = document.createElement('tr');
+          const nameCell = document.createElement('td');
+          const sizeCell = document.createElement('td');
+          nameCell.textContent = file.name;
+          sizeCell.textContent = file.size;
+          row.appendChild(nameCell);
+          row.appendChild(sizeCell);
+          fileList.appendChild(row);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+
+</body>
+</html>
